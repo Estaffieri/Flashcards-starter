@@ -29,4 +29,10 @@ describe("Turn" ,function() {
 
    expect(turn.returnGuess()).to.equal(turn.userGuess);
   })
+
+  it("should have a method that will return the Card", function () {
+    const turn = new Turn("hot-sauce", Object);
+
+    expect(turn.returnCard()).to.equal(turn.currentCard);
+  })
 });
