@@ -19,12 +19,14 @@ describe("Turn" ,function() {
   it("should take in two arguments", function() {
     const turn = new Turn("userGuess", Object);
 
-    // expect(turn).to.include("userGuess", Card);
+    // expect(turn).to.include("userGuess", Object);
     expect(turn.userGuess).to.equal("userGuess");
     expect(turn.currentCard).to.equal(Object);
   })
 
-  it("should have a method to return a guess", function () {
-    
+  it("should have a method that will return a guess", function () {
+   const turn = new Turn("userGuess", Object);
+
+   expect(turn.returnGuess()).to.equal(turn.userGuess);
   })
 });
