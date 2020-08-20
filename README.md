@@ -25,6 +25,8 @@ Writing a program to simulate a set of flash cards through the command line.
 
 *8/18* - Add PR Template to file structure.  Update Kanban board with tasks. Build out initial Card class structure.
 
+*8/20* - Build out Turn class and tests. Refactor tests after peer project pairing. Implement a beforeEach to DRY up testing suites.
+
 ### To-Do:
 
 ## Review Flashcards:
