@@ -35,4 +35,14 @@ describe("Deck", function() {
 
     expect(deck.cards).to.deep.equal([card1, card2, card3]);
   });
+
+  it("should be able to count cards", function() {
+    let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"],"sea otter");
+    let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    const deck = new Deck([card1, card2, card3]);
+    
+    expect(deck.countCards()).to.equal(3);
+  });
+
 });
