@@ -1,7 +1,8 @@
 const Card = require("../src/Card")
-const prototypeData = require("../src/data")
 
 class Deck {
-
+  constructor(cards) {
+    this.cards = cards;
+  }
 }
 module.exports = Deck;

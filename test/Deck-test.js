@@ -12,8 +12,10 @@ describe("Deck", function() {
     guess1 = "A users guess";
     guess2 = "sea otter";
     turn1 = new Turn(guess1, card);
-    turn2 = new Turn(guess2, card)
-    deck = new Deck(card);
+    turn2 = new Turn(guess2, card);
+    let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
   });
 
   it("should be a function", function() {
@@ -21,8 +23,16 @@ describe("Deck", function() {
   });
 
   it("should be an instance of Deck", function() {
+    const deck = new Deck()
     expect(deck).to.be.an.instanceof(Deck);
   });
 
-  // it("should be able to count how many cards are in the deck", function())
+  it("should be an array of cards", function() {
+    let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"],"sea otter");
+    let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    const deck = new Deck([card1, card2, card3])
+
+    expect(deck.cards).to.deep.equal([card1, card2, card3]);
+  });
 });
