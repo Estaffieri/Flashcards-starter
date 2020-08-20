@@ -23,9 +23,10 @@ Writing a program to simulate a set of flash cards through the command line.
 ## Progression
 *8/17* - Create Kanban project board on git. Read project spec. and plan approach to workflow.
 
-*8/18* - Add PR Template to file structure.  Update Kanban board with tasks. Build out initial Card class structure.
+*8/18* - Add PR Template to file structure. Update Kanban board with tasks. Build out initial Card class structure.
 
-*8/20* - Build out Turn class and tests. Refactor tests after peer project pairing. Implement a beforeEach to DRY up testing suites. Add files for Deck.js and Deck-test.js. Build and test Deck class.
+*8/20* - Build out Turn class and tests. Refactor tests after peer project pairing. Implement a beforeEach to DRY up testing suites. Add files for Deck.js and Deck-test.js. Build and test Deck class. Finishing the Deck class, begin the Round class.
+
 
 ### To-Do:
 
