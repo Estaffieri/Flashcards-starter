@@ -13,12 +13,16 @@ describe("Deck", function() {
     guess2 = "sea otter";
     turn1 = new Turn(guess1, card);
     turn2 = new Turn(guess2, card)
+    deck = new Deck(card);
   });
 
   it("should be a function", function() {
     expect(Deck).to.be.a("function");
   });
 
-  it("should be an array of card objects", function())
-  it("should be able to count how many cards are in the deck", function())
+  it("should be an instance of Deck", function() {
+    expect(deck).to.be.an.instanceof(Deck);
+  });
+
+  // it("should be able to count how many cards are in the deck", function())
 });
