@@ -1,38 +1,39 @@
 const chai = require("chai");
 const expect = chai.expect;
 
-const Turn = require("../src/Turn");
 const Card = require("../src/Card");
+const Turn = require("../src/Turn");
 
-describe("Turn" ,function() {
+describe("Turn", function() {
+  let card, guess1, guess2, turn1, turn2;
+  beforeEach(function() {
+    card = new Card(1, "What is Robbie\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    guess1 = "A users guess";
+    guess2 = "sea otter";
+    turn1 = new Turn(guess1, card);
+    turn2 = new Turn(guess2, card)
+  });
 
   it("should be a function", function() {
-    const turn = new Turn();
     expect(Turn).to.be.a("function");
   });
 
   it("should be an instance of Turn", function() {
-    const turn = new Turn();
-    expect(turn).to.be.an.instanceof(Turn);
+    expect(turn1).to.be.an.instanceof(Turn);
   });
 
-  it("should take in two arguments", function() {
-    const turn = new Turn("userGuess", Object);
+  it("should return a users guess", function () {
+   expect(guess1).to.equal(turn1.returnGuess());
+   expect(guess2).to.equal(turn2.returnGuess());
+  });
 
-    // expect(turn).to.include("userGuess", Object);
-    expect(turn.userGuess).to.equal("userGuess");
-    expect(turn.currentCard).to.equal(Object);
-  })
+  it("should return a flashcard", function () {
+    expect(card).to.equal(turn1.returnCard());
+    expect(card).to.equal(turn2.returnCard());
+  });
 
-  it("should have a method that will return a guess", function () {
-   const turn = new Turn("userGuess", Object);
-
-   expect(turn.returnGuess()).to.equal(turn.userGuess);
-  })
-
-  it("should have a method that will return the Card", function () {
-    const turn = new Turn("hot-sauce", Object);
-
-    expect(turn.returnCard()).to.equal(turn.currentCard);
-  })
+  it("should evaluate a users guess", function() {
+    expect(turn1.evaluateGuess()).to.equal(false);
+    expect(turn2.evaluateGuess()).to.equal(true);
+  });
 });
