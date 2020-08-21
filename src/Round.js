@@ -16,14 +16,13 @@ class Round {
   takeTurn(guess) {
     const currentCard = this.returnCurrentCard();
     this.currentTurn = new Turn(guess, currentCard);
-
-    //compares to card correct answers vis turn.evaluateGuess()
-    //add to incorrectGuesses array.
+    if (!this.currentTurn.evaluateGuess()){
+      this.incorrectGuesses.push(currentCard.id);
+    }
     this.turns++;
     return this.currentTurn.giveFeedback();
-
-
   }
+  
 }
 
 module.exports = Round;
