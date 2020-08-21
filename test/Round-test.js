@@ -51,4 +51,29 @@ describe("Round", function() {
     const round = new Round(deck)
     expect(round.incorrectGuesses.length).to.equal(0);
   });
+
+
+  it("should be an instance of Turn", function() {
+    let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn("guess");
+
+    expect(round.currentTurn).to.be.an.instanceof(Turn);
+  });
+
+  it("should have a way keep track of the turn", function() {
+    let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn("guess");
+
+    expect(round.takeTurn(round.turns)).to.equal(1);
+  });
 });
