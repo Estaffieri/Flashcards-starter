@@ -14,7 +14,6 @@ class Round {
     return this.deck.cards[this.turns];
   }
   takeTurn(guess) {
-
     const currentCard = this.returnCurrentCard();
     this.currentTurn = new Turn(guess, currentCard);
 

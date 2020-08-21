@@ -74,6 +74,6 @@ describe("Round", function() {
 
     round.takeTurn("guess");
 
-    expect(round.takeTurn(round.turns)).to.equal(1);
+    expect(round.turns).to.equal(1);
   });
 });
