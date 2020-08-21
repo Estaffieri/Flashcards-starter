@@ -43,10 +43,12 @@ describe("Round", function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck)
 
-
     expect(round.returnCurrentCard()).to.equal(card1);
   });
 
-
-
+  it("should start with no incorrect guesses", function() {
+    const deck = new Deck()
+    const round = new Round(deck)
+    expect(round.incorrectGuesses.length).to.equal(0);
+  });
 });
