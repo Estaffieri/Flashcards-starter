@@ -41,7 +41,7 @@ describe("Deck", function() {
     let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
     let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
     const deck = new Deck([card1, card2, card3]);
-    
+
     expect(deck.countCards()).to.equal(3);
   });
 
