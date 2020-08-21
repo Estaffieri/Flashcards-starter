@@ -17,6 +17,7 @@ describe("Round", function() {
     let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
     let card2 = new Card(1, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
     let card3 = new Card(1, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    const deck = new Deck([card1, card2, card3])
   });
 
   it("should be a function", function() {
@@ -24,7 +25,15 @@ describe("Round", function() {
   });
 
   it("should be an instance of Round", function() {
-    const round = new Round()
+    const deck = new Deck()
+    const round = new Round(deck)
     expect(round).to.be.an.instanceof(Round);
   });
+
+  it("should start with no turns", function() {
+    const deck = new Deck()
+    const round = new Round(deck)
+    expect(round.turns).to.equal(0);
+  });
+
 });
