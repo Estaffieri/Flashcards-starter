@@ -5,6 +5,7 @@ const Card = require("../src/Card");
 const Turn = require("../src/Turn");
 const Deck = require("../src/Deck");
 const Round = require("../src/Round");
+const Game = require("../src/Game");
 
 describe("Game", function() {
 
@@ -19,6 +20,7 @@ describe("Game", function() {
   });
 
   it("should have no Rounds at the start", function() {
-    expect(game.currentRound).to.be.equal.to(null);
+    const game = new Game();
+    expect(game.currentRound).to.equal(null);
   });
 });

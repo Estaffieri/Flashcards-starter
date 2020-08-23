@@ -4,15 +4,23 @@ const util = require('./util');
 
 class Game {
   constructor() {
-    this.currentRound = new Round;
+    this.currentRound = {};
   }
   printMessage(deck, round) {
       console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
-
   printQuestion(round) {
       util.main(round);
+  }
+  start() {
+    //creates new cards
+    //puts cards in a Deck
+    //this.currentRound = new Round(deck);
+    //invokes printMessage
+    //invokex PrintQuestion
+
+
   }
 }
 
