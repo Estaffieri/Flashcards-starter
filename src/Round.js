@@ -22,7 +22,15 @@ class Round {
     this.turns++;
     return this.currentTurn.giveFeedback();
   }
-  
+  calculatePercentCorrect() {
+    const amountIncorrect = this.incorrectGuesses.length;
+    const amountCorrect = this.deck.cards.length - amountIncorrect;
+    return Math.floor((amountCorrect / this.deck.cards.length) *100);
+  }
+  endRound() {
+    const percentCorrect = this.calculatePercentCorrect();
+    return `**Round Over!** You've answered ${percentCorrect}% of the questions correctly!`
+  }
 }
 
 module.exports = Round;
