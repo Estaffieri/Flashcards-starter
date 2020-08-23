@@ -27,7 +27,9 @@ Writing a program to simulate a set of flash cards through the command line.
 
 *8/20* - Build out Turn class and tests. Refactor tests after peer project pairing. Implement a beforeEach to DRY up testing suites. Add files for Deck.js and Deck-test.js. Build and test Deck class. Finishing the Deck class, begin the Round class.
 
-*8/22* - Completing this project with an extension. The round class has been completed with the addition of calculatePercentCorrect method and endRound method. Create the Game class.
+*8/22* - Completing this project with an extension. The round class has been completed with the addition of calculatePercentCorrect method and endRound method. Create the Game class. Add the game.start invocation to index.js
+
+*8/23* - Tidying up required files for each class and running the game in the terminal. Fixed the endRoundMessage logging issue and the game works correctly with both correct and incorrect guesses.
 
 
 ### To-Do:
