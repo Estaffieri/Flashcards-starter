@@ -100,8 +100,20 @@ describe("Round", function() {
     round.takeTurn("sea otter");
     round.takeTurn("sea otter");
 
-  console.log(round.incorrectGuesses.length);
-  console.log(round.deck.cards.length);
   expect(round.calculatePercentCorrect()).to.equal(66);
+  });
+
+  it("should print the message that ", function() {
+    let card1 = new Card(1, "What is Sam\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card2 = new Card(2, "What is Estelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    let card3 = new Card(3, "What is Rochelle\'s favorite animal", ["sea otter", "pug", "capybara"], "sea otter");
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn("unicorns");
+    round.takeTurn("sea otter");
+    round.takeTurn("sea otter");
+
+  expect(round.endRound()).to.equal("**Round Over!** You've answered 66% of the questions correctly!");
   });
 });
