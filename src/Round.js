@@ -22,7 +22,14 @@ class Round {
     this.turns++;
     return this.currentTurn.giveFeedback();
   }
-  
+  calculatePercentCorrect() {
+    const amountIncorrect = this.incorrectGuesses.length; //1
+    const amountCorrect = this.deck.cards.length - amountIncorrect; //2
+    return Math.floor((amountCorrect / this.deck.cards.length) *100);
+  }
+  endRound() {
+    
+  }
 }
 
 module.exports = Round;
