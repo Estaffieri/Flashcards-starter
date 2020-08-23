@@ -14,13 +14,10 @@ class Game {
       util.main(round);
   }
   start() {
-    //creates new cards
-    //puts cards in a Deck
-    //this.currentRound = new Round(deck);
-    //invokes printMessage
-    //invokex PrintQuestion
-
-
+    const currentDeck = new Deck(prototypeQuestions)
+    this.currentRound = new Round(currentDeck)
+    //invokes this.printMessage
+    //invokex this.printQuestion
   }
 }
 
