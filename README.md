@@ -33,6 +33,7 @@ Writing a program to simulate a set of flash cards through the command line.
 
 
 ### To-Do:
+- DRY up tests to all implement beforeEach if possible.
 
 ## Review Flashcards:
 
@@ -40,6 +41,3 @@ Writing a program to simulate a set of flash cards through the command line.
   <img width="460" height="300" src="" alt="">
 </p>
 
-<p align="center"></br>
-  <img width="460" height="300" src="" alt="">
-</p>
