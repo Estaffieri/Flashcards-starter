@@ -1,7 +1,4 @@
-const Card = require("../src/Card");
 const Turn = require("../src/Turn");
-const Deck = require("../src/Deck");
-
 
 class Round {
   constructor(deck){
@@ -29,7 +26,9 @@ class Round {
   }
   endRound() {
     const percentCorrect = this.calculatePercentCorrect();
-    return `**Round Over!** You've answered ${percentCorrect}% of the questions correctly!`
+    let endRoundMessage = `**Round Over!** You've answered ${percentCorrect}% of the questions correctly!`
+    console.log(endRoundMessage);
+    return endRoundMessage
   }
 }
 
