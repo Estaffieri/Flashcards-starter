@@ -38,5 +38,5 @@ Writing a program to simulate a set of flash cards through the command line.
 ## Review Flashcards:
 
 <p align="center"></br>
-  <img width="460" height="300" src="/.assets/Flashcards-video.mov" alt="Flashcards being run within the terminal">
+  <img width="460" height="300" src="https://media.giphy.com/media/fxTkrRXNaXlPvN6X7m/giphy.gif" alt="Flashcards being run within the terminal">
 </p>
